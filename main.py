@@ -14,7 +14,7 @@ goods = open('good_acc.txt', 'a+')
 # прокси
 proxies = open('proxy.txt').read().split('\n')
 # кол-во потоков
-thread_count = 100
+thread_count = 10
 
 # ip прокси
 ip_proxy = ''
@@ -61,7 +61,7 @@ def check_account(login):
     # если за сколько-то минут не загрузится страница, то она закрывается
     # driver.set_page_load_timeout(3)
 
-    driver = webdriver.Chrome(executable_path=r"C:\Users\Govard\Desktop\Scrap\chromedriver.exe", options=options)
+    driver = webdriver.Chrome(executable_path=r"chromedriver.exe", options=options)
 
     try:
         driver.get("https://www.instagram.com/accounts/password/reset/")
